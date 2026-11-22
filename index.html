@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vspa Kenya | Waxing, Vajacials, Massage & Body Care in Nairobi</title>
+<meta name="description" content="Kenya's OG waxing experts. Brazilian wax, vajacials, facials, massage, body scrubs and Moroccan bath at 7 branches in Nairobi, Mombasa and Eldoret. Book on WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: one flowing column of soft bands — hero, offer, menu, why, reviews, booking, branches, FAQ. */
+:root{
+  --forest:#123029; --forest-2:#1c4339; --gold:#c9a24a; --gold-soft:#e8d4a2;
+  --blush:#f4e3dc; --blush-2:#fbf3ef; --ink:#1d2421; --muted:#5f6b66; --line:#e6d8d1; --white:#fff;
+  --display:"Marcellus", Georgia, serif; --body:"Manrope", system-ui, sans-serif;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--blush-2);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,5vw,46px);color:var(--forest)}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.lead{color:var(--muted);max-width:60ch;margin:12px 0 0}
+section{padding-block:72px;scroll-margin-top:60px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s, background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn-gold{background:var(--gold);color:var(--forest)}
+.btn-gold:hover{background:#d8b45c}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-forest{background:var(--forest);color:#fff}
+.wa-ico{width:18px;height:18px;flex:none}
+
+/* preview ribbon — remove before going live */
+.preview{background:var(--ink);color:#f3ece6;font-size:13px;text-align:center;padding:9px 16px}
+.preview b{color:var(--gold-soft)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(18,48,41,.96);backdrop-filter:blur(8px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:var(--display);font-size:26px;letter-spacing:.04em;text-decoration:none;color:#fff}
+.logo span{color:var(--gold)}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
+.nav ul a{text-decoration:none;opacity:.85}.nav ul a:hover{opacity:1;color:var(--gold-soft)}
+.nav .btn{padding:10px 16px;font-size:14px}
+@media (max-width:820px){.nav ul{display:none}}
+
+/* hero */
+.hero{background:var(--forest);color:#fff;position:relative;overflow:hidden;padding-block:72px 88px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
+.hero::before{width:520px;height:520px;right:-140px;top:-160px;background:radial-gradient(circle at 30% 30%,rgba(201,162,74,.55),rgba(201,162,74,0) 65%)}
+.hero::after{width:420px;height:420px;left:-160px;bottom:-200px;background:radial-gradient(circle,rgba(244,227,220,.18),rgba(244,227,220,0) 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,8vw,86px);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:18px;color:#d9e3df;max-width:46ch;margin:20px 0 28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:18px 28px;margin-top:34px;font-size:14px;color:#c6d4cf}
+.trust b{display:block;font-family:var(--display);font-size:26px;color:#fff;font-weight:400}
+.stars{color:var(--gold);letter-spacing:2px}
+.hero-card{background:linear-gradient(160deg,#f4e3dc,#e9cfc4);color:var(--forest);border-radius:28px;padding:30px;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.hero-card .tag{display:inline-block;background:var(--forest);color:var(--gold-soft);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:99px;padding:6px 12px}
+.hero-card h3{font-size:32px;margin:16px 0 8px}
+.hero-card p{color:#4b4440;margin:0 0 18px;font-size:15px}
+.hero-card .price{font-family:var(--display);font-size:44px}
+.hero-card .price small{display:block;font-family:var(--body);font-size:14px;color:#6d625c;margin-top:4px}
+.leaf{position:absolute;right:18px;top:18px;width:70px;opacity:.5}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero{padding-block:56px 64px}}
+
+/* offer strip */
+.strip{background:var(--gold);color:var(--forest);font-weight:700;font-size:15px}
+.strip .wrap{display:flex;gap:10px 30px;flex-wrap:wrap;justify-content:center;padding-block:14px;text-align:center}
+
+/* menu */
+.menu-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 24px}
+.tabs button{font:600 14px var(--body);border:1.5px solid var(--line);background:#fff;color:var(--forest);padding:10px 16px;border-radius:99px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.menu-grid{grid-template-columns:1fr}}
+.item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:start}
+.item h3{font-size:22px;color:var(--forest)}
+.item p{grid-column:1/-1;margin:0;color:var(--muted);font-size:15px}
+.item .amt{font-weight:700;color:var(--forest);white-space:nowrap;font-variant-numeric:tabular-nums}
+.item .amt small{display:block;font-weight:500;font-size:12px;color:var(--muted);text-align:right}
+.item .badge{grid-column:1/-1;justify-self:start;font-size:12px;font-weight:700;background:var(--blush);color:#8a4b3a;border-radius:99px;padding:3px 10px}
+.item .book{grid-column:1/-1;justify-self:start;font-size:14px;font-weight:700;color:var(--forest);text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:1px;margin-top:4px}
+.tbc{color:var(--gold)}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+
+/* why */
+.why{background:var(--blush)}
+.why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
+@media (max-width:900px){.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.why-grid{grid-template-columns:1fr}}
+.why-card{background:var(--blush-2);border-radius:var(--r);padding:24px}
+.why-card svg{width:36px;height:36px;color:var(--gold)}
+.why-card h3{font-size:22px;color:var(--forest);margin:14px 0 6px}
+.why-card p{margin:0;color:var(--muted);font-size:15px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px;counter-reset:s}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.step{border-top:2px solid var(--gold);padding-top:18px}
+.step span{font-family:var(--display);font-size:40px;color:var(--gold)}
+.step h3{font-size:22px;color:var(--forest);margin:4px 0 6px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* reviews */
+.reviews{background:var(--forest);color:#fff}
+.reviews h2{color:#fff}
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+@media (max-width:860px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:var(--forest-2);border-radius:var(--r);padding:26px}
+.rev p{font-family:var(--display);font-size:21px;line-height:1.35;margin:10px 0 16px}
+.rev small{color:#b9c9c3}
+.score{display:flex;align-items:center;gap:14px;margin-top:10px;color:#cfdcd7}
+.score b{font-family:var(--display);font-size:52px;color:#fff;font-weight:400}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+@media (max-width:860px){.book-grid{grid-template-columns:1fr}}
+form.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:13px;font-weight:700;color:var(--forest)}
+input,select{font:500 15px var(--body);padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--blush-2);color:var(--ink);width:100%}
+.form-note{font-size:13px;color:var(--muted);margin:0}
+
+/* branches */
+.branches{background:var(--blush)}
+.br-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:32px}
+.br{background:#fff;border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--line)}
+.br.flag{border:2px solid var(--gold)}
+.br h3{font-size:22px;color:var(--forest)}
+.br .addr{color:var(--muted);font-size:14px;margin:0}
+.br .tel{font-weight:700;font-variant-numeric:tabular-nums;color:var(--forest);user-select:all}
+.br .links{display:flex;gap:14px;margin-top:6px;font-size:14px;font-weight:700}
+.br .links a{text-decoration:none;color:var(--forest);border-bottom:1.5px solid var(--gold)}
+.br .pill{align-self:start;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--forest);color:var(--gold-soft);padding:4px 9px;border-radius:99px}
+
+/* faq */
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-family:var(--display);font-size:22px;color:var(--forest);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:28px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:10px 0 0}
+
+/* footer */
+footer{background:var(--ink);color:#cfd6d3;padding-block:48px 90px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+footer h4{font-family:var(--display);font-weight:400;color:#fff;font-size:20px;margin:0 0 10px}
+footer a{color:var(--gold-soft);text-decoration:none}
+
+/* floating whatsapp */
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:30;background:#25d366;color:#08331a;border-radius:99px;padding:14px 18px;font-weight:800;text-decoration:none;display:flex;align-items:center;gap:8px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45)}
+.fab svg{width:22px;height:22px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="preview">✦ <b>Website preview made for Vspa</b> by <span id="maker">Shaldan</span>. Prices marked <span class="tbc">●</span> still need confirming. This page is not public yet.</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top">V<span>spa</span></a>
+    <ul>
+      <li><a href="#menu">Services &amp; prices</a></li>
+      <li><a href="#why">Why Vspa</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#branches">Branches</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-gold" href="#book">Book now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Kenya's OG waxing experts</div>
+      <h1>Smooth <em>since</em><br>day one.</h1>
+      <p>Brazilian waxing, vajacials, facials, massage, sauna and body scrubs, done gently by trained therapists in calm, spotless rooms.</p>
+      <div class="ctas">
+        <a class="btn btn-gold wa-link" data-msg="Hi Vspa! I'd like to book an appointment." href="#">
+          <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#menu">See prices</a>
+      </div>
+      <div class="trust">
+        <div><b>4.7 <span class="stars">★</span></b>164 Google reviews (Kileleshwa)</div>
+        <div><b>7</b>branches in 3 cities</div>
+        <div><b>49K</b>followers on Instagram</div>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="New this month">
+      <svg class="leaf" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 56C8 28 28 8 56 8c0 28-20 48-48 48Z"/><path d="M8 56 40 24M22 42h10M30 34h8M18 46v-8"/></svg>
+      <span class="tag">New · Limited slots</span>
+      <h3>Brightening body scrubs</h3>
+      <p>Glycolic &amp; lactic acid, kojic acid and papaya enzyme scrubs for dark knees, dark inner thighs and uneven skin tone.</p>
+      <div class="price">KSh 3,500 <small>intro price, first 10 clients</small></div>
+      <p style="margin-top:14px"><a class="btn btn-forest wa-link" data-msg="Hi Vspa! I'd like to book the new brightening body scrub (KSh 3,500 offer)." href="#">Claim a slot</a></p>
+    </aside>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <span>✦ FREE underarm wax with every Brazilian</span>
+  <span>✦ Nairobi · Mombasa · Eldoret</span>
+  <span>✦ Book in 1 minute on WhatsApp</span>
+</div></div>
+
+<main>
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <div class="eyebrow">Services &amp; prices</div>
+        <h2>The Vspa menu</h2>
+        <p class="lead">Clear prices, no surprises. Tap any treatment to book it on WhatsApp.</p>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="menu-grid" id="grid" role="tabpanel"></div>
+    <p class="note"><span class="tbc">●</span> Price to be confirmed by Vspa before launch. Prices may vary slightly by branch.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="eyebrow">Why Vspa</div>
+    <h2>Care you can relax into</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Spotless rooms</h3><p>Clean, calm treatment rooms. It's the first thing our clients mention.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg>
+        <h3>Gentle hands</h3><p>Trained therapists who explain every step, especially on your first wax.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Quick replies</h3><p>Message us on WhatsApp and get your slot confirmed fast.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6-5.3-6-11a6 6 0 1 1 12 0c0 5.7-6 11-6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+        <h3>Close to you</h3><p>Seven branches across Nairobi, Mombasa and Eldoret.</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><span>1</span><h3>Pick a treatment</h3><p>Choose from the menu or ask us what suits your skin.</p></div>
+      <div class="step"><span>2</span><h3>Book on WhatsApp</h3><p>Tell us your branch and time. We confirm your slot.</p></div>
+      <div class="step"><span>3</span><h3>Relax &amp; glow</h3><p>Walk out smooth, calm and refreshed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">What clients say</div>
+    <h2>Loved in Kileleshwa</h2>
+    <div class="score"><b>4.7</b><div><span class="stars">★★★★★</span><br>from 164 Google reviews</div></div>
+    <div class="rev-grid">
+      <figure class="rev" style="margin:0"><span class="stars">★★★★★</span><p>“Thoroughly impressed with the customer service! Quick to respond to my messages.”</p><small>Google review</small></figure>
+      <figure class="rev" style="margin:0"><span class="stars">★★★★★</span><p>“The staff were kind and welcoming.”</p><small>Google review, massage client</small></figure>
+      <figure class="rev" style="margin:0"><span class="stars">★★★★★</span><p>Clients keep mentioning the same things: a serene place, clean rooms and gentle staff.</p><small>Summary of Google reviews</small></figure>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap book-grid">
+    <div>
+      <div class="eyebrow">Book an appointment</div>
+      <h2>Your slot, in one message</h2>
+      <p class="lead">Fill this in and WhatsApp opens with your booking request ready to send to your chosen branch. No app or account needed.</p>
+      <p class="lead">Prefer to call? Every branch number is listed below.</p>
+    </div>
+    <form class="card" id="bookform">
+      <div class="row">
+        <label for="f-name">Your name<input id="f-name" required autocomplete="name" placeholder="e.g. Wanjiru"></label>
+        <label for="f-branch">Branch<select id="f-branch" required></select></label>
+      </div>
+      <label for="f-service">Treatment<select id="f-service" required></select></label>
+      <div class="row">
+        <label for="f-date">Preferred date<input id="f-date" type="date" required></label>
+        <label for="f-time">Preferred time<select id="f-time"><option>Morning</option><option>Midday</option><option>Afternoon</option><option>Evening</option></select></label>
+      </div>
+      <button class="btn btn-gold" type="submit">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+        Send booking on WhatsApp
+      </button>
+      <p class="form-note">Your request goes straight to the branch. We'll confirm the exact time with you.</p>
+    </form>
+  </div>
+</section>
+
+<section class="branches" id="branches">
+  <div class="wrap">
+    <div class="eyebrow">Find us</div>
+    <h2>7 branches, one standard</h2>
+    <div class="br-grid" id="branchgrid"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq">
+    <div class="eyebrow">Good to know</div>
+    <h2>Questions, answered</h2>
+    <details><summary>Is it my first Brazilian wax. Will it hurt?</summary><p>There's a quick sting, then it settles. Your therapist will talk you through it, work fast and use calming aftercare. Each wax usually feels easier than the last.</p></details>
+    <details><summary>How long should my hair be before waxing?</summary><p>About a quarter of an inch (around 2–3 weeks of growth after shaving) so the wax can grip properly. If it's longer, we'll trim it first.</p></details>
+    <details><summary>What is a vajacial?</summary><p>A facial for the bikini area. It cleanses, gently exfoliates and soothes after waxing to help prevent ingrown hairs and dark spots. It's the perfect add-on to a Brazilian.</p></details>
+    <details><summary>Any aftercare tips?</summary><p>For 24 hours, skip hot baths, sauna, the gym and tight clothing. After 48 hours, exfoliate gently a few times a week to keep ingrown hairs away.</p></details>
+    <details><summary>Do you have gift vouchers?</summary><p>Yes. Send us a WhatsApp message to get a Vspa voucher for someone special.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><h4>Vspa</h4><p>Kenya's OG waxing experts. Smooth since day one.</p><p>Waxing · Vajacials · Facials · Massage · Sauna · Moroccan bath · Body scrubs</p></div>
+    <div><h4>Follow</h4><p><a href="https://www.instagram.com/vspakenya/" rel="noopener" target="_blank">Instagram @vspakenya</a><br><a href="https://www.facebook.com/Vspakenya" rel="noopener" target="_blank">Facebook</a><br><a href="https://www.tiktok.com/@_vspakenya" rel="noopener" target="_blank">TikTok @_vspakenya</a></p></div>
+    <div><h4>Kileleshwa</h4><p>1 Kieni Rd, Kileleshwa, Nairobi<br><span style="user-select:all">0114 827 981</span></p></div>
+  </div>
+</footer>
+
+<a class="fab wa-link" data-msg="Hi Vspa! I'd like to book an appointment." href="#" aria-label="Chat with Vspa on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+// ===== Edit everything here =====
+const MAIN_WHATSAPP = "254114827981"; // Kileleshwa branch — swap for the central booking line if Vspa has one
+const BRANCHES = [
+  {name:"Kileleshwa", addr:"1 Kieni Rd, Kileleshwa, Nairobi", tel:"0114 827981", flag:true},
+  {name:"Kilimani", addr:"2nd Floor, Adlife Plaza, Nairobi", tel:"0706 856228"},
+  {name:"CBD", addr:"Kai Plaza, Tom Mboya Ave, Nairobi", tel:"0740 127111"},
+  {name:"Imaara Mall", addr:"Imaara Mall, Mombasa Rd, Nairobi", tel:"0104 212950"},
+  {name:"Ciata Mall", addr:"Ciata Mall, Kiambu Rd", tel:"0740 005625"},
+  {name:"Mombasa", addr:"Nyali (Bobs), Mombasa", tel:"0111 430861"},
+  {name:"Eldoret", addr:"Olive Plaza, Eldoret", tel:"0797 135615"},
+];
+// price: number = confirmed, tbc:true = needs confirming, null = "Ask us"
+const MENU = {
+  "Waxing": [
+    {n:"Brazilian wax", d:"Full intimate wax, gentle and thorough.", price:2000, tbc:true, badge:"+ FREE underarm wax"},
+    {n:"Underarm wax", d:"Quick, clean and long-lasting. Free with every Brazilian.", price:500},
+    {n:"Full arm wax", d:"Silky-smooth arms from shoulder to wrist.", price:1000, tbc:true},
+    {n:"Leg wax", d:"Half or full leg. Ask for the combo price.", price:null},
+    {n:"Face wax", d:"Brows, lip and chin for a clean, defined look.", price:null},
+  ],
+  "Intimate care": [
+    {n:"Mini vajacial", d:"Cleanse and soothe after your wax to prevent ingrown hairs.", price:1000, tbc:true},
+    {n:"Full vajacial", d:"Deep cleanse, gentle exfoliation, mask and brightening for the bikini area.", price:2000, tbc:true, badge:"Perfect after a Brazilian"},
+    {n:"Vaginal steaming", d:"A relaxing herbal steam for comfort and freshness.", price:null},
+    {n:"Armcial", d:"A facial for your underarms. Exfoliates, brightens and evens the tone.", price:null},
+  ],
+  "Body": [
+    {n:"Brightening body scrubs", d:"Glycolic & lactic acid, kojic acid or papaya enzyme, for dark knees, inner thighs and uneven tone.", price:3500, badge:"New · first 10 clients"},
+    {n:"Full body scrub", d:"Removes dead skin build-up for soft, smooth, glowing skin.", price:3500},
+    {n:"Moroccan bath", d:"Traditional black soap cleanse and full body exfoliation.", price:null},
+    {n:"Sauna", d:"Relax your muscles, ease stress and boost circulation.", price:null},
+  ],
+  "Massage": [
+    {n:"Swedish massage", d:"Long, flowing strokes to melt tension and calm the mind.", price:3000, tbc:true},
+    {n:"Deep tissue massage", d:"Firm pressure that works into tight, tired muscles.", price:4500, tbc:true},
+  ],
+  "Facials": [
+    {n:"Facial", d:"Deep cleanse, steam, extraction and a mask matched to your skin.", price:null},
+  ],
+};
+// ================================
+
+const fmt = n => "KSh " + n.toLocaleString("en-KE");
+const wa = (msg, num=MAIN_WHATSAPP) => "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+const intl = t => "254" + t.replace(/\D/g,"").replace(/^0/,"");
+document.querySelectorAll(".wa-link").forEach(a => { a.href = wa(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+
+const cats = Object.keys(MENU); let cur = cats[0];
+function renderTabs(){
+  const t = document.getElementById("tabs"); t.innerHTML = "";
+  cats.forEach(c => { const b = document.createElement("button"); b.type="button"; b.role="tab"; b.textContent=c; b.setAttribute("aria-selected", c===cur);
+    b.onclick = () => { cur=c; renderTabs(); renderGrid(); }; t.append(b); });
+}
+function renderGrid(){
+  const g = document.getElementById("grid"); g.innerHTML = "";
+  MENU[cur].forEach(it => {
+    const el = document.createElement("article"); el.className = "item";
+    const amt = it.price ? fmt(it.price) + (it.tbc ? ' <span class="tbc" title="To be confirmed">●</span>' : "") : "Ask us";
+    el.innerHTML = `<h3></h3><div class="amt">${amt}</div><p></p>${it.badge?'<span class="badge"></span>':""}<a class="book" target="_blank" rel="noopener">Book this →</a>`;
+    el.querySelector("h3").textContent = it.n; el.querySelector("p").textContent = it.d;
+    if (it.badge) el.querySelector(".badge").textContent = it.badge;
+    el.querySelector(".book").href = wa(`Hi Vspa! I'd like to book: ${it.n}.`);
+    g.append(el);
+  });
+}
+renderTabs(); renderGrid();
+
+const bg = document.getElementById("branchgrid");
+BRANCHES.forEach(b => {
+  const el = document.createElement("div"); el.className = "br" + (b.flag ? " flag" : "");
+  el.innerHTML = `${b.flag?'<span class="pill">Vspa Gold</span>':""}<h3></h3><p class="addr"></p><span class="tel"></span><div class="links"><a target="_blank" rel="noopener">WhatsApp</a><a target="_blank" rel="noopener">Directions</a></div>`;
+  el.querySelector("h3").textContent = b.name; el.querySelector(".addr").textContent = b.addr; el.querySelector(".tel").textContent = b.tel;
+  const [w, d] = el.querySelectorAll(".links a");
+  w.href = wa(`Hi Vspa ${b.name}! I'd like to book an appointment.`, intl(b.tel));
+  d.href = "https://www.google.com/maps/search/" + encodeURIComponent("Vspa " + b.addr);
+  bg.append(el);
+});
+
+const fb = document.getElementById("f-branch"), fs = document.getElementById("f-service");
+BRANCHES.forEach(b => fb.add(new Option(b.name, b.tel)));
+cats.forEach(c => { const og = document.createElement("optgroup"); og.label = c; MENU[c].forEach(it => og.append(new Option(it.n, it.n))); fs.append(og); });
+const fd = document.getElementById("f-date"); fd.min = new Date().toISOString().slice(0,10);
+document.getElementById("bookform").addEventListener("submit", e => {
+  e.preventDefault();
+  const branch = fb.options[fb.selectedIndex].text;
+  const msg = `Hi Vspa ${branch}! I'd like to book:\n• Treatment: ${fs.value}\n• Date: ${fd.value}\n• Time: ${document.getElementById("f-time").value}\n• Name: ${document.getElementById("f-name").value}`;
+  window.open(wa(msg, intl(fb.value)), "_blank", "noopener");
+});
+</script>
+</body>
+</html>
